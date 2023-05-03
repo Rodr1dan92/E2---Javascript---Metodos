@@ -1,3 +1,9 @@
+:root {
+  --background: #111111;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,6 +11,8 @@
     list-style-type: none;
     text-decoration: none;
   }
+  
+  /*----------HEADER------------*/
   
   .navbar {
     display: flex;
@@ -14,13 +22,14 @@
     height: 100px;
     padding: 0 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #222;
+    background-color: var(--background);
   }
-
+  
   .navbar img{
-    height: 100%;
+    height: 60%;
+    width: 80px;
   }
-
+  
   ul {
     margin: 0;
     display: flex;
@@ -29,7 +38,7 @@
     gap: 35px;
   }
   
-    
+  
   .options :hover {
     color: #ffffff;
     
@@ -38,6 +47,135 @@
   a {
     text-align: center;
     color: #e0be5f;
-    font-size: 25px;
+    font-size: 20px;
   }
   
+  /*----------SECTIONS------------*/
+  
+  main {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  #hero {
+    padding: 70px 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 70px;
+  }
+  
+  /*---------HERO INFO------------*/
+
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+  }
+
+  .hero-info h1 {
+    text-align: center;
+    font-size: 55px;
+    min-width: 500px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .hero-info p {
+    text-align: center;
+    font-size: 24px;
+    width: 70%;
+    color: gainsboro;
+  }
+
+  .hero-info a {
+    color: white;
+    background-color: var(--primary);
+    width: 120px;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  /*---------HERO CARDS------------*/
+
+   .hero-cards {
+    width: 95%;
+    margin: auto;
+    background: var(--secondary);
+    border-radius: 15px;
+    overflow:hidden;
+  }
+
+  .hero-cards ul{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    width: 400%;
+    animation: automatic 15s infinite alternate linear;
+  }
+
+  .hero-cards li{
+    width: 100%;
+    list-style: none;
+  }
+
+  .hero-cards img{
+    width: 100%;
+    height: 80%;
+    border-radius: 6px;
+  }
+
+  @keyframes automatic {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+  }
+ 
+  /*----------ABOUT----------*/
+  
+  #about {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    padding: 8rem 4rem;
+  }
+
+  /*----------FOOTER----------*/
+  
+  footer {
+    width: 100%;
+    padding: 2rem 0;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #f9f9f9;
+    gap: 20px;
+
+  }
+
+  .contacto, .copy{
+    padding: 15px;
+  }
